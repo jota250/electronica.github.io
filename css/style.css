@@ -489,4 +489,46 @@ body {
     margin-left: 1.5rem;
 }
 
+/* --- FOOTER SOCIALS --- */
+
+.footer-socials {
+    margin: 15px 0;
+}
+
+.footer-socials img {
+    width: 28px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.15);
+}
+
+/* --- FOOTER SOCIALS --- */
+
+.footer-socials {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrado horizontal */
+    gap: 10px; /* Espacio entre texto e icono */
+}
+
+.footer-socials .social-text {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+.footer-socials img {
+    width: 26px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.15);
+}
+
 
