@@ -1,0 +1,568 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background: #0d0f12;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #0d0f12;
+  border-bottom: 1px solid #1e2228;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.logo {
+  height: 72px;
+  width: auto;
+}
+
+/* ================= NAV ================= */
+.nav a {
+  margin-left: 26px;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+.nav a:hover {
+  color: #1AA0D8;
+}
+
+.btn-nav {
+  padding: 8px 18px;
+  background: #2a2f36;
+  color: #ffffff;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+.btn-nav:hover {
+  background: #3a4452;
+}
+
+/* ================= HERO ================= */
+.hero-video {
+  position: relative;
+  min-height: 70vh;
+  max-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 15, 18, 0.65);
+  z-index: 2;
+}
+
+.hero-video::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(13,15,18,0) 0%, #0d0f12 100%);
+  z-index: 2;
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 680px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 2.1rem;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.hero-content p {
+  max-width: 560px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 14px;
+  color: #cbd5e1;
+}
+
+/* ================= HERO BUTTONS ================= */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ================= BOTONES ================= */
+.btn-primary {
+  display: inline-block;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 114, 255, 0.35);
+}
+
+/* Hover: se eleva */
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 114, 255, 0.45);
+}
+
+/* Click: se hunde */
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 15px rgba(0, 114, 255, 0.3);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 40px;              /* MISMA forma */
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Hover: ligero relleno */
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border-color: #ffffff;
+}
+
+/* Click */
+.btn-secondary:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= SERVICES ================= */
+.services {
+  padding: 90px 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.85rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: #161a20;
+  padding: 36px;
+  border-radius: 14px;
+  border: 1px solid #1e2228;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ================= ICONOS ================= */
+.service-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1AA0D8;
+  background: rgba(26, 160, 216, 0.12);
+  border-radius: 50%;
+  transition: all 0.35s ease;
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+  stroke-width: 1.9;
+}
+
+.service-card:hover .service-icon {
+  background: #1AA0D8;
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(26, 160, 216, 0.35);
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.service-card h3::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #1AA0D8;
+  margin: 10px auto 0;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-top: 16px;
+}
+
+/* ================= LISTAS SERVICIOS ================= */
+.service-list {
+  list-style: none;
+  margin-top: 18px;
+  padding: 0;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  text-align: left;
+  transition: all 0.35s ease;
+}
+
+.service-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1AA0D8;
+  font-weight: 700;
+  transition: transform 0.35s ease;
+}
+
+/* Microanimación */
+.service-card:hover .service-list li {
+  transform: translateX(4px);
+  color: #ffffff;
+}
+
+.service-card:hover .service-list li::before {
+  transform: translateX(2px);
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 2px #1AA0D8,
+    0 16px 36px rgba(0,0,0,0.45);
+}
+
+/* ================= WHY US ================= */
+.why-us {
+  padding: 90px 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.why-item {
+  background: #161a20;
+  padding: 36px;
+  border-radius: 14px;
+  border: 1px solid #1e2228;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  border-top: 1px solid #1e2228;
+  font-size: 0.85rem;
+  color: #b5b7ba;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+  }
+
+}
+
+/* ================= ANIMACIÓN ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ====== WHY US: mismo estilo que servicios ====== */
+
+.why-item h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.why-item h3::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  background: #1AA0D8;
+  margin: 10px auto 0;
+}
+
+.why-item p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ====== WHY US: mismo hover que servicios ====== */
+
+.why-item {
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 0 2px #1AA0D8,
+    0 16px 36px rgba(0,0,0,0.45);
+}
+
+/* ====== WHY US: título igual que Servicios ====== */
+
+.why-us h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.85rem;
+}
+
+/* ================= ASESORÍA ================= */
+
+.assistance {
+  padding: 90px 0;
+}
+
+.assistance h2 {
+  text-align: center;
+  font-size: 1.85rem;
+  margin-bottom: 16px;
+}
+
+.assistance-intro {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 40px;
+  color: #cbd5e1;
+}
+
+.assistance-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #161a20;
+  padding: 36px;
+  border-radius: 14px;
+  border: 1px solid #1e2228;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background: #0d0f12;
+  border: 1px solid #1e2228;
+  border-radius: 6px;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1AA0D8;
+}
+
+/* ===== Página de agradecimiento ===== */
+
+.thank-you {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you h2 {
+  margin-bottom: 20px;
+}
+
+.thank-you p {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* ===== Mensaje de éxito formulario ===== */
+
+.assistance-success {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.assistance-success h2 {
+  margin-bottom: 16px;
+}
+
+.assistance-success p {
+  margin-bottom: 28px;
+  color: #cbd5e1;
+}
+
+/* ===== RGPD ===== */
+
+.rgpd {
+  font-size: 0.85rem;
+}
+
+.rgpd-label {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.rgpd-label input {
+  margin-top: 3px;
+}
+
+.rgpd-label a {
+  color: #1AA0D8;
+  text-decoration: underline;
+}
+
+.footer-legal {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+.footer-legal a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  text-decoration: underline;
+}
