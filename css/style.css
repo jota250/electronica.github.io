@@ -471,5 +471,17 @@ body {
 
 }
 
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        padding-bottom: 4rem;
+    }
+
+    .hero-text {
+        transform: translateY(0);
+    }
+
+}
 
 
