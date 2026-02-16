@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0c0c0c;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    background: #000;
+    border-bottom: 1px solid #222;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* LOGO */
+.logo img {
+    max-height: 85px;
+    width: auto;
+    display: block;
+}
+
+/* CONTACTO HEADER */
+.header-contact {
+    display: flex;
+    align-items: center;
+}
+
+.header-contact a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* ================= BOTONES ================= */
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #ff2f92;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #ff4aa5;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid #4fc3ff;
+    color: #4fc3ff;
+}
+
+.btn-secondary:hover {
+    background: #4fc3ff;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+.btn-neon {
+    background: #ff2f92;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.btn-neon:hover {
+    background: #ff4aa5;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    padding: 110px 0;
+    position: relative;
+    overflow: hidden; /* CLAVE para superposición limpia */
+    position: relative;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.65fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text h2 {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    margin-top: 20px;
+    max-width: 500px;
+    font-size: 1.05rem;
+    color: #ddd;
+}
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* HERO IMAGE SUPERPUESTA */
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 150%;        /* más grande */
+    max-width: none;
+    display: block;
+    margin: 0 auto;     /* centrada */
+    position: relative;
+    top: -20px;         /* mantenemos ligera subida */
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+    background: #111;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 2rem;
+}
+
+.features-text {
+    margin-top: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ccc;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: #ff2f92;
+    transform: translateY(-5px);
+}
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 80px 0;
+}
+
+.services h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: #111;
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: #4fc3ff;
+    transform: translateY(-5px);
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #000;
+    padding: 80px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    background: #111;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background: #ff2f92;
+    border: none;
+    padding: 14px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #ff4aa5;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    background: #000;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 100%;
+        right: 0;
+        top: 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .logo img {
+        max-height: 65px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header-contact {
+        justify-content: center;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* === HERO: TEXTO Y BOTONES CENTRADOS EN TODO EL HERO === */
+
+.hero-grid {
+    position: relative;
+}
+
+.hero-text {
+    grid-column: 1 / -1;   /* ocupa todo el ancho del hero */
+    text-align: center;
+    z-index: 2;            /* por delante de la imagen */
+}
+
+.hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    justify-content: center;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 150%;
+    max-width: none;
+}
+
+/* Reordenar botones y texto en el hero */
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-buttons {
+    order: 2;
+}
+
+.hero-text p {
+    order: 3;
+}
+
+/* Separar botones y texto hacia abajo en el hero */
+
+.hero-buttons {
+    margin-top: 1rem;
+}
+
+.hero-text p {
+    margin-top: 1rem;
+}
+
+.hero-text {
+    transform: translateY(5rem);
+}
+
+/* Efecto sutil de movimiento en la imagen del hero */
+
+.hero-image img {
+    animation: heroFloat 12s ease-in-out infinite;
+}
+
+@keyframes heroFloat {
+    0% {
+        transform: scale(1.05) translateY(0);
+    }
+    50% {
+        transform: scale(1.1) translateY(-10px);
+    }
+    100% {
+        transform: scale(1.05) translateY(0);
+    }
+}
+
+/* Degradado en los laterales del hero */
+
+.hero-image img {
+    -webkit-mask-image: linear-gradient(to right, 
+        transparent 0%, 
+        black 15%, 
+        black 85%, 
+        transparent 100%),
+        
+        linear-gradient(to bottom, 
+        transparent 0%, 
+        black 15%, 
+        black 85%, 
+        transparent 100%);
+        
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+}
+
+/* Línea separadora en tarjetas de servicios */
+
+.service-card h4 {
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
