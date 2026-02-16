@@ -458,14 +458,18 @@ body {
 
 @media (max-width: 768px) {
 
-    .logo img {
-        width: 160px;
-        max-width: 80%;
+    header {
+        width: 100%;
+    }
+
+    header img[src*="logo"] {
+        width: 150px;
         height: auto;
-        display: block;
         margin: 0 auto;
+        display: block;
     }
 
 }
+
 
 
