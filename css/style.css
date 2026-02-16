@@ -484,4 +484,9 @@ body {
 
 }
 
+.horario-viernes {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
 
