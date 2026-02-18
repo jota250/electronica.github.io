@@ -11,6 +11,9 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
@@ -25,7 +28,6 @@
             <a href="tel:954081025">📞 954 081 025</a>
             <a href="https://wa.me/34673578930" class="btn-neon">WhatsApp</a>
         </div>
-
     </div>
 </header>
 
@@ -41,7 +43,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="img/hero.png" alt="Electronica Cars Sevilla">
+            <img src="img/hero.png" alt="Electrónica del automóvil en Sevilla">
         </div>
     </div>
 </section>
@@ -56,10 +58,27 @@
         </p>
 
         <div class="features-grid">
-            <div class="feature-card">🔌 Electrónica avanzada</div>
-            <div class="feature-card">🧠 Diagnóstico profesional</div>
-            <div class="feature-card">⚙️ Mecánica especializada</div>
-            <div class="feature-card">🚗 Todas las marcas</div>
+
+            <div class="feature-card">
+                <i data-lucide="cpu"></i>
+                <span>Electrónica avanzada</span>
+            </div>
+
+            <div class="feature-card">
+                <i data-lucide="scan-line"></i>
+                <span>Diagnóstico profesional</span>
+            </div>
+
+            <div class="feature-card">
+                <i data-lucide="settings"></i>
+                <span>Mecánica especializada</span>
+            </div>
+
+            <div class="feature-card">
+                <i data-lucide="car"></i>
+                <span>Todas las marcas</span>
+            </div>
+
         </div>
     </div>
 </section>
@@ -139,10 +158,9 @@
             </div>
 
             <p style="margin-top:10px;">
-                <a 
-                    href="https://www.google.com/maps?q=Ctra.+de+Isla+Menor,+37,+41703+Dos+Hermanas,+Sevilla"
-                    target="_blank"
-                    rel="noopener">
+                <a href="https://www.google.com/maps?q=Ctra.+de+Isla+Menor,+37,+41703+Dos+Hermanas,+Sevilla"
+                   target="_blank"
+                   rel="noopener">
                     Ver en Google Maps
                 </a>
             </p>
@@ -162,21 +180,25 @@
     <p>© 2026 Electrónica Cars · Mecánica y Electrónica del Automóvil · Sevilla</p>
 
     <div class="footer-socials">
-    <span class="social-text">Síguenos en TikTok</span>
-    <a href="https://www.tiktok.com/@electronica.cars" target="_blank" rel="noopener">
-        <img src="img/tiktok.png" alt="TikTok Electronic Cars">
-    </a>
-</div>
+        <span class="social-text">Síguenos en TikTok</span>
+        <a href="https://www.tiktok.com/@electronica.cars" target="_blank" rel="noopener">
+            <img src="img/tiktok.png" alt="TikTok Electronic Cars">
+        </a>
+    </div>
 
     <p class="footer-links">
-        <a href="aviso-legal.html">Aviso Legal</a> |
-        <a href="privacidad.html">Política de Privacidad</a> |
+        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="privacidad.html">Política de Privacidad</a>
         <a href="cookies.html">Política de Cookies</a>
     </p>
 </footer>
 
 <!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/34673578930" class="whatsapp-float">💬</a>
+
+<script>
+    lucide.createIcons();
+</script>
 
 </body>
 </html>
