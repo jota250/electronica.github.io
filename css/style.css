@@ -531,4 +531,28 @@ body {
     transform: scale(1.15);
 }
 
+/* ================= FOOTER LINKS ================= */
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ff2f92;
+    text-decoration: underline;
+}
+
+/* ================= CONTACT TITLE ================= */
+
+.contact h3 {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+}
 
