@@ -1113,3 +1113,40 @@ font-size:3.6rem !important;
 
 }
 
+/* ===== HERO CINEMATOGRAFICO ===== */
+
+.hero-text h1{
+
+opacity:0;
+
+transform:translateY(35px);
+
+animation: heroCine 1.2s ease forwards;
+
+animation-delay:.3s;
+
+}
+
+
+/* animación */
+
+@keyframes heroCine{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
