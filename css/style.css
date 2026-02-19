@@ -176,17 +176,20 @@ body {
 /* ================= FEATURE CARDS - PREMIUM TÉCNICO ================= */
 
 .feature-card {
-    background: #121212;
-    padding: 30px;
-    border-radius: 14px;
-    border: 1.9px solid rgba(79, 195, 255, 0.95);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-    font-weight: 500;
-    text-align: center;
-    transition: 0.25s ease;
+
+background:#121212;
+padding:30px;
+border-radius:14px;
+border:1.9px solid #ff2f92;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:18px;
+font-weight:500;
+text-align:center;
+transition:.3s ease;
+position:relative;
+
 }
 
 .feature-card i {
@@ -197,9 +200,19 @@ body {
 }
 
 .feature-card:hover {
-    border-color: rgba(79, 195, 255, 0.6);
-    box-shadow: 0 0 18px rgba(79, 195, 255, 0.15);
-    transform: translateY(-3px);
+
+border-color:#ff4aa5;
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.6),
+
+0 0 18px rgba(255,47,146,.35),
+
+0 0 40px rgba(255,47,146,.15);
+
 }
 
 .feature-card:hover i {
@@ -733,8 +746,11 @@ opacity:1;
 }
 
 .feature-card:hover i {
-    color: #4fc3ff;
-    transform: scale(1.1);
+
+color:#ff4aa5;
+
+transform: scale(1.1);
+
 }
 
 /* ================= WHATSAPP TOOLTIP ================= */
@@ -1147,6 +1163,152 @@ opacity:1;
 transform:translateY(0);
 
 }
+
+}
+
+/* ================= HERO CINE NIVEL DIOS ================= */
+
+/* TITULO */
+
+.hero-text h1{
+
+opacity:0;
+
+transform:translateY(35px);
+
+animation: heroTitulo 1.1s ease forwards;
+
+animation-delay:.2s;
+
+}
+
+
+/* BOTONES */
+
+.hero-buttons{
+
+opacity:0;
+
+transform:translateY(30px);
+
+animation: heroBotones 1.1s ease forwards;
+
+animation-delay:.8s;
+
+}
+
+
+/* TEXTO */
+
+.hero-text p{
+
+opacity:0;
+
+transform:translateY(25px);
+
+animation: heroTexto 1.1s ease forwards;
+
+animation-delay:1.3s;
+
+}
+
+
+
+/* animaciones */
+
+@keyframes heroTitulo{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heroBotones{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes heroTexto{
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===== FEATURE CARDS GLOW ROSA PREMIUM ===== */
+
+.feature-card{
+
+border:1.9px solid #ff2f92 !important;
+
+position:relative;
+
+transition: all .3s ease;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-4px);
+
+border-color:#ff4aa5 !important;
+
+box-shadow:
+
+0 10px 25px rgba(0,0,0,.6),
+
+0 0 18px rgba(255,47,146,.35),
+
+0 0 45px rgba(255,47,146,.18) !important;
+
+}
+
+/* ===== FEATURE CARD ROSA DEFINITIVO ===== */
+
+.feature-card{
+
+border:2px solid #ff2f92 !important;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-6px);
+
+border-color:#ff4aa5 !important;
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.7),
+
+0 0 30px rgba(255,47,146,.75),
+
+0 0 80px rgba(255,47,146,.45),
+
+0 0 140px rgba(255,47,146,.2) !important;
+
+}
+
+.feature-card:hover i{
+
+color:#ff4aa5 !important;
 
 }
 
