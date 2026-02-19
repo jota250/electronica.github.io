@@ -803,3 +803,161 @@ opacity:1;
     width: 80px;
     height: auto;
 }
+
+/* Título SERVICIOS más grande solo en escritorio */
+
+@media (min-width: 1200px){
+
+.services h3{
+
+font-size: 3rem;
+
+}
+
+}
+
+/* ================= SERVICIOS PREMIUM TITULO ================= */
+
+@media (min-width:1200px){
+
+.services h3{
+
+font-size:3.2rem;
+
+letter-spacing:1.5px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+text-transform:uppercase;
+
+}
+
+}
+
+/* ================= TITULO SERVICIOS NIVEL DISEÑADOR LOCO FINAL ================= */
+
+@media (min-width:1200px){
+
+.services{
+
+text-align:center;
+
+}
+
+.services h3{
+
+font-size:3.2rem;
+
+letter-spacing:1.5px;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+position:relative;
+
+display:inline-block;
+
+padding-bottom:15px;
+
+margin:0 auto;
+
+overflow:hidden; /* ✅ AÑADE SOLO ESTO */
+
+}
+
+
+/* línea base */
+
+.services h3::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+height:4px;
+
+width:100%;
+
+background:rgba(79,195,255,.35);
+
+border-radius:3px;
+
+}
+
+
+/* brillo eléctrico */
+
+.services h3::before{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+left:-40%;
+
+width:40%;
+
+height:4px;
+
+border-radius:3px;
+
+background:linear-gradient(
+90deg,
+transparent,
+#4fc3ff,
+transparent
+);
+
+filter:blur(1px);
+
+animation: energiaLinea 3.5s linear infinite;
+
+}
+
+
+/* movimiento energía */
+
+@keyframes energiaLinea{
+
+0%{
+
+left:-40%;
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+50%{
+
+left:100%;
+
+opacity:1;
+
+}
+
+100%{
+
+left:100%;
+
+opacity:0;
+
+}
+
+}
+
+}
