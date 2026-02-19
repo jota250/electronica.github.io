@@ -218,23 +218,153 @@ body {
 }
 
 .services-grid {
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    grid-template-columns: repeat(3, 1fr);
+
     gap: 30px;
+
     margin-top: 50px;
+
+    align-items: stretch;
+
+}
+
+@media (max-width: 992px){
+
+.services-grid{
+
+grid-template-columns: repeat(2,1fr);
+
+}
+
+}
+
+@media (max-width: 600px){
+
+.services-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
 
 .service-card {
-    background: #111;
-    padding: 35px;
-    border-radius: 15px;
-    border: 1px solid #222;
-    transition: 0.3s ease;
+
+    background:#111;
+    padding:35px;
+    border-radius:15px;
+    border:1px solid #222;
+
+    display:flex;
+    flex-direction:column;
+    height:100%;
+
+    position:relative;
+    overflow:hidden;
+
+    transform-style:preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
 }
 
-.service-card:hover {
-    border-color: #4fc3ff;
-    transform: translateY(-5px);
+
+/* luz azul dinámica */
+
+.service-card::before{
+
+content:"";
+
+position:absolute;
+
+top:var(--y,50%);
+left:var(--x,50%);
+
+width:320px;
+height:320px;
+
+transform:translate(-50%,-50%);
+
+background:radial-gradient(
+circle,
+rgba(79,195,255,.45),
+transparent 65%
+);
+
+opacity:0;
+
+transition:opacity .3s ease;
+
+pointer-events:none;
+
+}
+
+.service-card:hover::before{
+
+opacity:1;
+
+}
+
+.service-card:hover{
+
+border-color:#4fc3ff;
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.7),
+0 0 45px rgba(79,195,255,.25);
+
+}
+
+/* === ENERGÍA AZUL EN BORDE === */
+
+.service-card::after {
+
+content:"";
+
+position:absolute;
+
+inset:-2px;
+
+border-radius:18px;
+
+background:linear-gradient(
+120deg,
+transparent,
+rgba(79,195,255,.7),
+transparent
+);
+
+opacity:0;
+
+transition:opacity .35s ease;
+
+z-index:-1;
+
+filter:blur(12px);
+
+pointer-events:none;
+
+}
+
+
+/* aparece en hover */
+
+.service-card:hover::after{
+
+opacity:1;
+
+}
+
+/* evita cortes de texto */
+
+.service-card p {
+    flex-grow: 1; /* ✅ añadido */
 }
 
 /* ================= CONTACT ================= */
@@ -481,7 +611,7 @@ body {
 .service-card h4 {
     padding-bottom: 0.75rem;
     margin-bottom: 0.75rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 3px solid #55acd6;
 }
 
 /* Ajuste del logo en móvil */
