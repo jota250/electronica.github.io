@@ -231,12 +231,30 @@ motor.
             </p>
         </div>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Nombre" required>
-            <input type="tel" placeholder="Teléfono" required>
-            <textarea placeholder="Mensaje"></textarea>
-            <button type="submit">Enviar mensaje</button>
-        </form>
+        <div class="stats-grid">
+
+<div class="stat-card">
+<span class="stat-number" data-target="15">0</span>
+<p>Años de experiencia</p>
+</div>
+
+<div class="stat-card">
+<span class="stat-number" data-target="2000">0</span>
+<p>Vehículos reparados</p>
+</div>
+
+<div class="stat-card">
+<span class="stat-number" data-target="100" data-suffix="%">0</span>
+<p>Clientes satisfechos</p>
+</div>
+
+<div class="stat-card">
+<span class="stat-number" data-target="100" data-suffix="%">0</span>
+<p>Calidad de servicio</p>
+</div>
+
+</div>
+
     </div>
 </section>
 
@@ -312,6 +330,78 @@ card.style.transform="";
 });
 
 });
+
+</script>
+
+
+<script>
+
+/* ===== CONTADOR HIPNÓTICO PREMIUM ===== */
+
+const counters = document.querySelectorAll(".stat-number");
+
+let statsStarted = false;
+
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting && !statsStarted){
+
+statsStarted = true;
+
+counters.forEach(counter => {
+
+const target = +counter.dataset.target;
+
+const suffix = counter.dataset.suffix || "";
+
+let start = null;
+
+const duration = 1800; // duración animación (ms)
+
+function animateCounter(timestamp){
+
+if(!start) start = timestamp;
+
+const progress = timestamp - start;
+
+let percent = Math.min(progress / duration,1);
+
+
+/* easeOutCubic (rápido → lento) */
+
+percent = 1 - Math.pow(1 - percent,3);
+
+const value = Math.floor(target * percent);
+
+counter.textContent =
+value.toLocaleString() + suffix;
+
+if(progress < duration){
+
+requestAnimationFrame(animateCounter);
+
+}else{
+
+counter.textContent =
+target.toLocaleString() + suffix;
+
+}
+
+}
+
+requestAnimationFrame(animateCounter);
+
+});
+
+}
+
+});
+
+},{threshold:.45});
+
+observer.observe(document.querySelector(".stats-grid"));
 
 </script>
 
