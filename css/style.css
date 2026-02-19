@@ -1575,3 +1575,132 @@ font-weight:700;
 
 }
 
+/* ===== SERVICIOS ENERGIA MOVIL PREMIUM ===== */
+
+@media (max-width:768px){
+
+.services{
+
+text-align:center;
+
+}
+
+.services h3{
+
+position:relative;
+
+display:inline-block;
+
+overflow:hidden;
+
+padding-bottom:12px;
+
+font-size:2.6rem;
+
+letter-spacing:1.5px;
+
+font-weight:700;
+
+text-transform:uppercase;
+
+}
+
+
+/* línea base */
+
+.services h3::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+width:100%;
+
+height:3px;
+
+background:rgba(79,195,255,.35);
+
+border-radius:3px;
+
+}
+
+
+/* energía azul */
+
+.services h3::before{
+
+content:"";
+
+position:absolute;
+
+bottom:0;
+
+left:-40%;
+
+width:40%;
+
+height:3px;
+
+border-radius:3px;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+#4fc3ff,
+
+transparent
+
+);
+
+filter:blur(1px);
+
+animation:energiaLineaMovil 3.5s linear infinite;
+
+}
+
+
+/* animación */
+
+@keyframes energiaLineaMovil{
+
+0%{
+
+left:-40%;
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:1;
+
+}
+
+50%{
+
+left:100%;
+
+opacity:1;
+
+}
+
+100%{
+
+left:100%;
+
+opacity:0;
+
+}
+
+}
+
+}
+
