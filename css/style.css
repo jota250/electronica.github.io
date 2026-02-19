@@ -1099,3 +1099,17 @@ word-break:break-word;
 }
 
 }
+
+/* ===== HERO TITULO MÁS GRANDE ESCRITORIO ===== */
+
+@media (min-width:1200px){
+
+.hero-text h1,
+.hero-text h2{
+
+font-size:3.6rem !important;
+
+}
+
+}
+
