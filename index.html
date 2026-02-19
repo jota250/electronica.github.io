@@ -234,12 +234,12 @@ motor.
         <div class="stats-grid">
 
 <div class="stat-card">
-<span class="stat-number" data-target="15">0</span>
+<span class="stat-number" data-target="15" data-prefix="+">0</span>
 <p>Años de experiencia</p>
 </div>
 
 <div class="stat-card">
-<span class="stat-number" data-target="2000">0</span>
+<span class="stat-number" data-target="2000" data-prefix="+">0</span>
 <p>Vehículos reparados</p>
 </div>
 
@@ -356,6 +356,8 @@ const target = +counter.dataset.target;
 
 const suffix = counter.dataset.suffix || "";
 
+const prefix = counter.dataset.prefix || "";
+
 let start = null;
 
 const duration = 1800; // duración animación (ms)
@@ -376,7 +378,7 @@ percent = 1 - Math.pow(1 - percent,3);
 const value = Math.floor(target * percent);
 
 counter.textContent =
-value.toLocaleString() + suffix;
+prefix + value.toLocaleString() + suffix;
 
 if(progress < duration){
 
@@ -385,7 +387,7 @@ requestAnimationFrame(animateCounter);
 }else{
 
 counter.textContent =
-target.toLocaleString() + suffix;
+prefix + target.toLocaleString() + suffix;
 
 }
 
