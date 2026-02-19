@@ -961,3 +961,141 @@ opacity:0;
 }
 
 }
+
+/* ================= FEATURES TITULO MÁS GRANDE EN ESCRITORIO ================= */
+
+@media (min-width:1200px){
+
+.features h3{
+
+font-size:2.8rem;
+
+}
+
+}
+
+/* ===== header móvil correo correcto ===== */
+
+@media (max-width:768px){
+
+.header-contact{
+
+gap:10px;
+
+}
+
+.header-email{
+
+font-size:0.95rem;
+
+word-break:break-word;
+
+text-align:center;
+
+}
+
+}
+
+/* ===== HEADER MOVIL TELEFONO + WHATSAPP ARRIBA ===== */
+
+@media (max-width:768px){
+
+.header-contact{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:10px;
+
+}
+
+/* teléfono */
+
+.header-contact a[href^="tel"]{
+
+order:1;
+
+}
+
+/* whatsapp */
+
+.header-contact .btn-neon{
+
+order:2;
+
+}
+
+/* correo abajo centrado */
+
+.header-email{
+
+order:3;
+
+width:100%;
+
+text-align:center;
+
+font-size:0.95rem;
+
+word-break:break-word;
+
+}
+
+}
+
+/* ===== HEADER MOVIL PERFECTO ===== */
+
+@media (max-width:768px){
+
+.header-contact{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+/* teléfono */
+
+.header-contact a[href^="tel"]{
+
+order:1;
+
+}
+
+/* whatsapp */
+
+.header-contact .btn-neon{
+
+order:2;
+
+white-space:nowrap;
+
+}
+
+/* correo debajo centrado */
+
+.header-email{
+
+order:3;
+
+flex-basis:100%;
+
+text-align:center;
+
+font-size:0.95rem;
+
+word-break:break-word;
+
+}
+
+}
